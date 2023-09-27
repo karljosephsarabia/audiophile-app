@@ -2,3 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+    font-family: "manrope";
+    src: url("assets/Manrope/static/Manrope-Regular.ttf");
+    }
+
+:root {
+    font-family: manrope;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
