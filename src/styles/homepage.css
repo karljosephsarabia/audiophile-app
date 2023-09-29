@@ -7,9 +7,19 @@
   }
   .hero-content-align {
     text-align: center;
-    width: 80%;
+    width: 90%;
+    margin: 0 auto;
     top: 30%;
-    left: 10%;
+    left: 6%;
+  }
+  .hero-content-align h1 {
+    font-size: 15px;
+    letter-spacing: 10px;
+    margin-bottom: 18px;
+  }
+  .hero-content-align h2 {
+    font-size: 30px;
+    margin-bottom: 18px;
   }
   .hero-content-align p {
     width: 100%;
