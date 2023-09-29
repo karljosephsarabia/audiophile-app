@@ -32,7 +32,9 @@ export default {
       margin: {
         'footerTop': 'clamp(96px, 9.38vw, 120px)',
         'footerLogoTop': 'clamp(56px, 5.47vw, 70px)',
-        'footerLogoBot': 'clamp(40px, 3.91vw, 50px)'
+        'footerLogoBot': 'clamp(40px, 3.91vw, 50px)',
+        'productDetailTitle': 'clamp(20px, 1.96vw, 25px)',
+        'productDetailImage': 'clamp(41px, 4vw, 51.2px)'
       },
       width: {
         'widthClamp': 'clamp(400px, 40vw, 512px)',
@@ -42,11 +44,13 @@ export default {
         'footerLogo': 'clamp(143px, 13.97vw, 178.81px)',
         'footerDesc': 'clamp(512px, 50vw, 640px)',
         'footerSocialMed': 'clamp(20px, 1.96vw, 25px)',
-        'footerLine': 'clamp(112px, 10.94vw, 140px)'
+        'footerLine': 'clamp(112px, 10.94vw, 140px)',
+        'productdetail': 'clamp(984px, 96.1vw, 1080px)'
       },
       lineHeight: {
         'lineHeightClamp': 'clamp(40px, 3.91vw, 50px)',
-        'articleTitle': 'clamp(44px, 4.3vw, 55.04px)'
+        'articleTitle': 'clamp(44px, 4.3vw, 55.04px)',
+        'productDetailTitle': 'clamp(36px, 3.52vw, 45px)'
       },
       gap: {
         'categoryGapClamp': 'clamp(16px, 1.57vw, 20px)',
