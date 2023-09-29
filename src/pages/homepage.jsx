@@ -27,7 +27,7 @@ const Homepage = () => {
 
             <div className="features mb-[10rem]">
                 <div className="bg-[#D87D4A] rounded-lg mb-5 zx9">
-                    <img className="mobile" src="/assets/home/mobile/image-speaker-zx9.png" alt="speaker-zx9" />
+                    <img className="h-[280px] mobile" src="/assets/home/mobile/image-speaker-zx9.png" alt="speaker-zx9" />
                     <img className="h-[400px] desktop" src="/assets/home/desktop/image-speaker-zx9.png" alt="speaker-zx9" />
                     <img className="tablet" src="/assets/home/tablet/image-speaker-zx9.png" alt="speaker-zx9" />
                     <div className="zx9-content">
