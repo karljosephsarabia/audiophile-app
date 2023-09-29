@@ -10,7 +10,7 @@ const ProductListView = () => {
                         <h6 className="uppercase text-[#D87D4A] tracking-[0.6rem] font-semibold pb-[1.25rem] md:tracking-[0.7rem] lg:text-clampStatus lg:tracking-[0.625vw]">new product</h6>
                         <h1 className="uppercase font-bold text-[2.2rem] leading-[2.75rem] md:text-[2.7rem] md:leading-[3.3rem] md:tracking-widest lg:text-clampTitle lg:leading-lineHeightClamp">xx99 mark ii headphones</h1>
                         <p className="text-[0.96rem] py-6 md:text-[1.1rem] lg:text-clampDesc lg:py-paddingXClamp">The new xx99 mark ii headphones is the pinnacle of pristine audio. It redefines your premium headphone experience by reproducing the balanced depth and precision of studio-quality sound.</p>
-                        <button className="uppercase bg-[#D87D4A] text-white px-7 py-3 text-[0.96rem] md:text-[1.1rem] md:px-8 lg:text-buttonClamp lg:px-paddingXClamp">see product</button>
+                        <button className="uppercase bg-[#D87D4A] text-white px-7 py-3 text-[0.96rem] md:text-[1.1rem] md:px-8 lg:text-buttonClamp lg:px-paddingXClamp hover:bg-[#FBAF85]">see product</button>
                     </div>
                 </div>
                 <div className="flex flex-col items-center rounded-lg text-center w-[21rem] mb-28 md:w-auto lg:flex-row-reverse lg:text-start lg:gap-[10vw]">
@@ -21,7 +21,7 @@ const ProductListView = () => {
                         <h6 className="uppercase text-[#D87D4A] tracking-[0.6rem] font-semibold pb-[1.25rem] md:tracking-[0.7rem] lg:text-clampStatus lg:tracking-[0.625vw]">new product</h6>
                         <h1 className="uppercase font-bold text-[2.2rem] leading-[2.75rem] md:text-[2.7rem] md:leading-[3.3rem] md:tracking-widest lg:text-clampTitle lg:leading-lineHeightClamp">xx99 mark ii headphones</h1>
                         <p className="text-[0.96rem] py-6 md:text-[1.1rem] lg:text-clampDesc lg:py-paddingXClamp">The new xx99 mark ii headphones is the pinnacle of pristine audio. It redefines your premium headphone experience by reproducing the balanced depth and precision of studio-quality sound.</p>
-                        <button className="uppercase bg-[#D87D4A] text-white px-7 py-3 text-[0.96rem] md:text-[1.1rem] md:px-8 lg:text-buttonClamp lg:px-paddingXClamp">see product</button>
+                        <button className="uppercase bg-[#D87D4A] text-white px-7 py-3 text-[0.96rem] md:text-[1.1rem] md:px-8 lg:text-buttonClamp lg:px-paddingXClamp hover:bg-[#FBAF85]">see product</button>
                     </div>
                     
                 </div>
@@ -33,7 +33,7 @@ const ProductListView = () => {
                         <h6 className="uppercase text-[#D87D4A] tracking-[0.6rem] font-semibold pb-[1.25rem] md:tracking-[0.7rem] lg:text-clampStatus lg:tracking-[0.625vw]">new product</h6>
                         <h1 className="uppercase font-bold text-[2.2rem] leading-[2.75rem] md:text-[2.7rem] md:leading-[3.3rem] md:tracking-widest lg:text-clampTitle lg:leading-lineHeightClamp">xx99 mark ii headphones</h1>
                         <p className="text-[0.96rem] py-6 md:text-[1.1rem] lg:text-clampDesc lg:py-paddingXClamp">The new xx99 mark ii headphones is the pinnacle of pristine audio. It redefines your premium headphone experience by reproducing the balanced depth and precision of studio-quality sound.</p>
-                        <button className="uppercase bg-[#D87D4A] text-white px-7 py-3 text-[0.96rem] md:text-[1.1rem] md:px-8 lg:text-buttonClamp lg:px-paddingXClamp">see product</button>
+                        <button className="uppercase bg-[#D87D4A] text-white px-7 py-3 text-[0.96rem] md:text-[1.1rem] md:px-8 lg:text-buttonClamp lg:px-paddingXClamp hover:bg-[#FBAF85]">see product</button>
                     </div>
                 </div>
             </section>
