@@ -1,7 +1,18 @@
+import Header from '../components/common/header';
+import ProductDetailsView from '../components/productDetailsView';
+import Category from '../components/common/category';
+import Article from '../components/common/article';
+import Footer from '../components/common/footer';
+
+
 const ProductDetails = () => {
     return (
         <>
-        <p>This is Product Details</p>
+            <Header />
+            <ProductDetailsView />
+            <Category />
+            <Article />
+            <Footer />
         </>
     );
 };
