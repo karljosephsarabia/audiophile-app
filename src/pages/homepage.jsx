@@ -22,24 +22,8 @@ const Homepage = () => {
                     <button className="uppercase bg-[#D87D4A] text-white px-7 py-3 text-[0.96rem] mt-5">see product</button>       
                 </div>
             </div>
-
-            <div className="category-align-content mt-[5rem]">
-                <Category 
-                    imageSrc="/assets/shared/desktop/image-category-thumbnail-headphones.png" 
-                    imageAlt="headphone"
-                    title="headphone"  
-                />
-                <Category 
-                    imageSrc="/assets/shared/desktop/image-category-thumbnail-speakers.png" 
-                    imageAlt="headphone"
-                    title="headphone"
-                />
-                <Category 
-                    imageSrc="/assets/shared/desktop/image-category-thumbnail-earphones.png" 
-                    imageAlt="headphone"
-                    title="headphone"
-                />
-            </div>
+            
+            <Category />
 
             <div className="features mb-[10rem]">
                 <div className="bg-[#D87D4A] rounded-lg mb-5 zx9">
@@ -75,7 +59,7 @@ const Homepage = () => {
                     </div>
                 </div>
             </div>
-            
+
             <div className="" >
                 <Article />
             </div>
