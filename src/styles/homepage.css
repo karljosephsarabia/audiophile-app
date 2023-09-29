@@ -1,0 +1,129 @@
+@media screen and (max-width: 640px) {
+  .desktop {
+    display: none;
+  }
+  .tablet {
+    display: none;
+  }
+  .hero-content-align {
+    text-align: center;
+    width: 80%;
+    top: 30%;
+    left: 10%;
+  }
+  .hero-content-align p {
+    width: 100%;
+  }
+  .features {
+    width: 90%;
+    margin: 0 auto;
+  }
+  .zx9 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+  .zx9-content {
+    text-align: center;
+    width: 70%;
+  }
+  .display > div {
+    margin-top: 20px;
+  }
+}
+
+@media (min-width: 641px) and (max-width: 1007px)  {
+  .mobile {
+    display: none;
+  }
+  .desktop {
+    display: none;
+  }
+  .hero-content-align {
+    text-align: center;
+    width: 80%;
+    top: 30%;
+    left: 10%;
+  }
+  .hero-content-align p {
+    width: 70%;
+    margin: 0 auto;
+  }
+  .features {
+    width: 85%;
+    margin: 0 auto;
+  }
+  .display {
+    display: flex;
+    gap: 20px;
+  }
+  .display > div {
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .zx9 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    width: 96%;
+    margin: 0 auto;
+  }
+  .zx9-content {
+    text-align: center;
+    width: 40%;
+  }
+  .size {
+    height: 400px;
+    width: 50%;
+  }
+}
+
+@media screen and (min-width: 1008px) {
+  .mobile {
+    display: none;
+  }
+  .tablet {
+    display: none;
+  }
+  .hero-content-align {
+    width: 50%;
+    top: 30%;
+    left: 12%;
+  }
+  .features {
+    width: 80%;
+    margin: 0 auto;
+  }
+  .display {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  .display > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .zx9 {
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 100px;
+  }
+  .zx9-content {
+    width: 30%;
+  }
+  .size {
+    height: 400px;
+    width: 50%;
+  }
+}

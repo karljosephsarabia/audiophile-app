@@ -11,7 +11,11 @@ const ProductList = () => {
             <Header />
             <Banner />
             <ProductListView />
-            <Category />
+            <Category 
+                imageSrc="/assets/shared/desktop/image-category-thumbnail-headphones.png" 
+                imageAlt="headphone"
+                title="headphone"
+            />
             <Article />
             <Footer />
         </>
