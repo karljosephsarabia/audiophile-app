@@ -20,6 +20,9 @@ export default {
         'footerCategory': 'clamp(12.8px, 1.25vw, 16px)',
         'footerDesc': 'clamp(14.56px, 1.42vw, 18.18px)'
       },
+      fontFamily: {
+        'manrope': ['Manrope', 'sans-serif']
+      },
       padding: {
         'clampPaddingTop': 'clamp(114.82px, 11.21vw, 143.49px)',
         'paddingXClamp': 'clamp(24px, 2.35vw, 35px)',
