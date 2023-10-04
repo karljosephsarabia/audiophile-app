@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import { Context } from "../../context/context";
-import { useLocation, useNavigate, useParams } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 
 const Header = () => {
