@@ -1,5 +1,13 @@
+import { useContext } from "react";
+import { Context } from "../../context/context";
+import { useLocation, useNavigate, useParams } from "react-router-dom";
+
 
 const Header = () => {
+
+    const { menuNav } = useContext(Context);
+    const navigate = useNavigate();
+
     return (
         <>
             <header className="bg-black">
@@ -7,11 +15,12 @@ const Header = () => {
                     <div className="flex flex-row items-center gap-12 lg:gap-[10vw]">
                         <img src="assets/shared/tablet/icon-hamburger.svg" alt="hambergur-menu" className=" w-4 h-4 lg:hidden" />
                         <img src="assets/shared/desktop/logo.svg" alt="audiophile-logo" className="hidden md:inline-block" />
-                        <ul className="text-white uppercase flex-row gap-[4vw] font-bold hidden lg:flex">
-                            <li className="hover:text-orange"><a href="#">home</a></li>
-                            <li className="hover:text-orange"><a href="#">headphones</a></li>
-                            <li className="hover:text-orange"><a href="#">speakers</a></li>
-                            <li className="hover:text-orange"><a href="#">earphones</a></li>
+                        <ul className="flex-row gap-[4vw] font-bold hidden lg:flex ">
+                            {menuNav.map((nav, index) =>
+                                index < 4 && <li key={index}>
+                                    <button className={`uppercase hover:text-orange ${nav.path === location.pathname ? 'text-orange' : 'text-white'}`} onClick={(e) => navigate(nav.path)}>{nav.title}</button>
+                                </li>
+                            )}
                         </ul>
                     </div>
                     <img src="assets/shared/desktop/logo.svg" alt="audiophile-logo" className="md:hidden" />
