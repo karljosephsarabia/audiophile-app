@@ -1,13 +1,10 @@
 import Article from "../components/common/article";
 import Category from "../components/common/category";
-import Footer from "../components/common/footer";
-import Header from "../components/common/header";
 import "../styles/homepage.css";
 
 const Homepage = () => {
     return (
         <>  
-            <Header />
             <div className="relative">
                 <img className="relative desktop" src="/assets/home/desktop/image-hero.jpg"/>
                 <img className="relative mobile" src="/assets/home/mobile/image-header.jpg"/>
@@ -62,9 +59,6 @@ const Homepage = () => {
 
             <div className="" >
                 <Article />
-            </div>
-            <div className="" >
-                <Footer />
             </div>
         </>
     );
