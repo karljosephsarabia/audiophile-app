@@ -3,6 +3,8 @@ import Homepage from './pages/homepage';
 import ProductList from './pages/productList';
 import ProductDetails from './pages/productDetails';
 import PageNotFound from './pages/pageNotFound';
+import { CartProvider } from './context/cartContext';
+import PageNotFound from './pages/pageNotFound';
 import { useContext } from 'react';
 import { Context } from './context/context';
 import Header from './components/common/header';
@@ -38,10 +40,13 @@ function App() {
 
   return (
     <>
-      <Header />
-      {routes}
-      {/* <Route path='/ProductDetails' element={<ProductDetails />} /> */}
-      <Footer />
+
+      <CartProvider>
+        <Header />
+        {routes}
+        {/* <Route path='/ProductDetails' element={<ProductDetails />} /> */}
+        <Footer />
+      </CartProvider>
     </>
   );
 }
