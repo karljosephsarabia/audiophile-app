@@ -3,10 +3,14 @@ import Homepage from './pages/homepage';
 import ProductList from './pages/productList';
 import ProductDetails from './pages/productDetails';
 import PageNotFound from './pages/pageNotFound';
+import { useContext } from 'react';
+import { Context } from './context/context';
 import Header from './components/common/header';
 import Footer from './components/common/footer';
 
 function App() {
+
+  const { menuNav } = useContext(Context);
 
   const routes = useRoutes(menuNav.map((menu, index) => {
     if (index < 1) {
