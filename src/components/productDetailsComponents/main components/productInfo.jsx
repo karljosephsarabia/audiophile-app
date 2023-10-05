@@ -1,7 +1,10 @@
-
+import { useContext } from "react";
+import { CartContext } from "../../../context/cartContext";
 
 const ProductInfo = ({ item, status }) => {
-   
+
+    const {handleAddToCartButton} = useContext(CartContext);
+
     return (
         <>
             <div className="lg:flex lg:flex-col lg:justify-center">
@@ -20,7 +23,8 @@ const ProductInfo = ({ item, status }) => {
                                 <input type="tel" name="quantity" className="text-center bg-[#F1F1F1] outline-none w-[38.72px] font-bold" defaultValue={1} min={0} max={99} maxLength={2} />
                                 <button className="w-[38.72px] h-[48px]">+</button>
                             </span>
-                            <button className="uppercase bg-orange text-white font-bold tracking-widest px-8 text-[0.90rem]">add to card</button>
+                            <button className="uppercase bg-orange text-white font-bold tracking-widest px-8 text-[0.90rem]"
+                            onClick={() => handleAddToCartButton(item)}>add to card</button>
                         </div>
                     </div>
                 </section>
