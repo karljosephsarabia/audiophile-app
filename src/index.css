@@ -4,7 +4,7 @@
 
 @font-face {
     font-family: "manrope";
-    src: url("assets/Manrope/static/Manrope-Regular.ttf");
+    src: url("/assets/Manrope/static/Manrope-Regular.ttf");
     }
 
 :root {

@@ -25,11 +25,11 @@ const Footer = () => {
                 <div className="container text-white bg-black flex flex-col items-center px-5 relative w-[375px] md:w-full md:items-start">
                     <div className="border-t-4 border-[#D87D4A] w-footerLine"></div>
                     <div className="mt-14 lg:flex lg:flex-row lg:justify-between lg:w-full lg:mb-footerLogoBot lg:mt-footerLogoTop">
-                        <img src="assets/shared/desktop/logo.svg" alt="audiophile-logo" className="w-[143px] h-[25px] lg:w-footerLogo lg:h-footerLogo" />
+                        <img src="/assets/shared/desktop/logo.svg" alt="audiophile-logo" className="w-[143px] h-[25px] lg:w-footerLogo lg:h-footerLogo" />
                         <ul className="text-center flex flex-col gap-7 tracking-widest my-10 md:flex-row lg:my-0 lg:text-footerCategory">
                             {menuNav.map(({ path, title }, index) =>
                                 index < 4 && <li key={index}>
-                                    <button className={`${path === location.pathname ? 'text-orange' : 'text-white'} uppercase hover:text-orange`} onClick={() => handleOnFooterMenu(path)}>{title}</button>
+                                    <button className={`${path === location.pathname ? 'text-orange' : 'text-white'} uppercase hover:text-orange`} onClick={()=>handleOnFooterMenu(path)} >{title}</button>
                                 </li>
                             )}
                         </ul>

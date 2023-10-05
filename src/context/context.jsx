@@ -16,15 +16,15 @@ const MyProvider = (props) => {
         }, {
             title: 'headphones',
             path: '/headphones',
-            categoryImage: 'assets/shared/desktop/image-category-thumbnail-headphones.png'
+            categoryImage: '/assets/shared/desktop/image-category-thumbnail-headphones.png'
         }, {
             title: 'speakers',
             path: '/speakers',
-            categoryImage: 'assets/shared/desktop/image-category-thumbnail-speakers.png'
+            categoryImage: '/assets/shared/desktop/image-category-thumbnail-speakers.png'
         }, {
             title: 'earphones',
             path: '/earphones',
-            categoryImage: 'assets/shared/desktop/image-category-thumbnail-earphones.png'
+            categoryImage: '/assets/shared/desktop/image-category-thumbnail-earphones.png'
         }, {
             title: '404 Page Not Found',
             path: '*'
