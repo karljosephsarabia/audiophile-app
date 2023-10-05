@@ -16,7 +16,7 @@ const Main = () => {
             {itemView?.name && <section className="px-5 mx-auto">
                 <ProductInfo item={itemView} status={itemView.new} />
                 <ProductGallery item={itemView} />
-                <ProductSuggestion item={itemView} />
+                <ProductSuggestion item={itemView} data={data}/>
             </section>}
         </>
     );
