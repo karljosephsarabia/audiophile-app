@@ -31,6 +31,18 @@ export const CartProvider = (props) => {
         }
     };
 
+    function handleRemoveFromCart(index) {
+        setCardData((prevData) => {
+            if (index >= 0 && index < prevData.length) {
+                const newData = [...prevData];
+                newData.splice(index, 1);
+                localStorage.setItem('items', JSON.stringify(newData));
+                return newData;
+            }
+            return prevData;
+        });
+    };
+
     return (
         <>
             <CartContext.Provider value={{
