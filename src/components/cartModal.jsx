@@ -6,7 +6,7 @@ import data from "../../public/data.json";
 
 const CartModal = () => {
     
-    const { openModal , setOpenModal } = useContext(CartContext);
+    const { openModal , setOpenModal, cardData } = useContext(CartContext);
     const cancelButtonRef = useRef(null);
 
     return (
