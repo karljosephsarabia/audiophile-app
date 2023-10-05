@@ -1,23 +1,15 @@
-import { useContext, useEffect, useState } from "react";
+import { useContext } from "react";
 import ProductGallery from "./main components/productGallery";
 import ProductInfo from "./main components/productInfo";
 import ProductSuggestion from "./main components/productSuggestion";
 import { Context } from "../../context/context";
+import { useParams } from "react-router-dom";
 
 const Main = () => {
 
-    const { data, selectedItem } = useContext(Context);
-    const [itemView, setItemView] = useState([]);
-
-    useEffect(() => {
-        const filterData = () => data.forEach(item => {
-            if (item.slug === selectedItem) {
-                setItemView(item);
-            }
-        });
-
-        filterData();
-    }, []);
+    const { data } = useContext(Context);
+    const { id } = useParams();
+    const itemView = data?.find(item => item.slug === id);
 
     return (
         <>

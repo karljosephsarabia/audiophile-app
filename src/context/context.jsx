@@ -6,7 +6,6 @@ export const Context = createContext();
 const ContextProvider = (props) => {
     const [data, setData] = useState([]);
     const [mountData, setMountData] = useState('true');
-    const [selectedItem, setSelectedItem] = useState('');
 
 
     //Setting up navigation menu array
@@ -51,7 +50,7 @@ const ContextProvider = (props) => {
 
     return (
         <>
-            <Context.Provider value={{ menuNav, setMenuNav, data, selectedItem, setSelectedItem }}>
+            <Context.Provider value={{ menuNav, setMenuNav, data }}>
                 {props.children}
             </Context.Provider>
         </>

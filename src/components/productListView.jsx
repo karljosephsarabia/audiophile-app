@@ -3,7 +3,7 @@ import { Context } from "../context/context";
 import { useLocation, useNavigate } from 'react-router-dom';
 
 const ProductListView = () => {
-    const { data, setSelectedItem } = useContext(Context);
+    const { data } = useContext(Context);
     const location = useLocation();
     const newLocation = location.pathname.replace('/', '');
     const navigate = useNavigate();
@@ -15,8 +15,7 @@ const ProductListView = () => {
             behavior: "smooth"
         });
 
-        setSelectedItem(slug);
-        navigate(`/${category}/${slug}`);
+        navigate(`${slug}`);
     };
 
 
