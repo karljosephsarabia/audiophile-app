@@ -79,6 +79,9 @@ const CartModal = () => {
                                                                     <button className="w-[10px] h-[10px]">+</button>
                                                                 </span>
                                                             </div>
+                                                            <div className=''>
+                                                                <span className='remove'></span>
+                                                            </div>
                                                         </div>
                                                         </div>
                                                     </li>
