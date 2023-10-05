@@ -57,13 +57,13 @@ const CartModal = () => {
                                         <div className="flow-root">
                                             <ul role="list" className="-my-6 divide-y divide-gray-200">
                                                 {
-                                                    data.map((product) => (
+                                                    cardData.map((product) => (
                                                     <li key={product.id} className="py-6">
                                                         <div className='' style={{ display: "flex", gap: "10px"}}>
                                                         <div className="h-24 w-24 flex-shrink-0 rounded-md border border-gray-200">
                                                             <img
-                                                                src={product.categoryImage.desktop}
-                                                                alt={product.id}
+                                                                src={product.image.mobile}
+                                                                alt={product.slug}
                                                                 className="h-full w-full"
                                                             />
                                                         </div>
