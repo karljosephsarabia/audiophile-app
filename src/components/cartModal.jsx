@@ -6,7 +6,7 @@ import data from "../../public/data.json";
 
 const CartModal = () => {
     
-    const { openModal , setOpenModal, cardData, handleRemoveFromCart } = useContext(CartContext);
+    const { openModal , setOpenModal, cardData, handleRemoveFromCart, cartCount} = useContext(CartContext);
     const cancelButtonRef = useRef(null);
 
     function removeItemFromCart(index) {
@@ -43,7 +43,7 @@ const CartModal = () => {
                             <div className="flex h-full flex-col overflow-y-scroll bg-white shadow-xl">
                                 <div className="flex-1 overflow-y-auto px-4 py-6 sm:px-6" style={{maxHeight: "400px"}}>
                                     <div className="flex items-start justify-between">
-                                        <Dialog.Title className="text-lg font-medium text-gray-900">Cart(0)</Dialog.Title>
+                                        <Dialog.Title className="text-lg font-medium text-gray-900">Cart({cartCount})</Dialog.Title>
                                         <div className="ml-3 flex h-7 items-center">
                                             <button
                                                 type="button"

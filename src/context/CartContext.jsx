@@ -17,6 +17,8 @@ export const CartProvider = (props) => {
         return [];
     });
 
+    const cartCount = cardData.length;
+
     function handleAddToCartButton(item) {
         const isItemInCart = cardData.some((cartItem) => cartItem.id === item.id);
         if (!isItemInCart) {
@@ -48,7 +50,7 @@ export const CartProvider = (props) => {
         <>
             <CartContext.Provider value={{
                 openModal, setOpenModal,
-                cardData, handleAddToCartButton, handleRemoveFromCart,
+                cardData, handleAddToCartButton, handleRemoveFromCart, cartCount,
             }}>
                 {props.children}
             </CartContext.Provider>
