@@ -13,7 +13,7 @@ const ProductInfo = ({ item, status }) => {
                         {status && <h6 className="uppercase text-orange font-semibold tracking-[0.6rem] md:text-[0.8rem] md:tracking-[0.55rem] lg:tracking-[0.49rem] lg:text-footerCategory">new product</h6>}
                         <h1 className=" font-manrope font-bold text-[1.80rem] uppercase tracking-[0.1rem] leading-9 my-5 lg:text-clampTitle lg:my-productDetailTitle lg:leading-productDetailTitle">{item.name}</h1>
                         <p className="text-[0.97rem] lg:text-clampDesc">{item.description}</p>
-                        <h3 className="font-bold text-[1.3rem] my-5 lg:my-productDetailTitle">$ {item.price}</h3>
+                        <h3 className="font-bold text-[1.3rem] my-5 lg:my-productDetailTitle">$ {item.price.toLocaleString('en-US')}</h3>
                         <div className="flex flex-row gap-5">
                             <span className=" bg-[#F1F1F1]">
                                 <button className="w-[38.72px] h-[48px]">-</button>
