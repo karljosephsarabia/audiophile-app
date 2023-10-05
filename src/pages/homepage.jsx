@@ -1,25 +1,38 @@
+import { useNavigate } from "react-router-dom";
 import Article from "../components/common/article";
 import Category from "../components/common/category";
 import "../styles/homepage.css";
 
 const Homepage = () => {
+    const navigate = useNavigate();
+
+    const handleOnClick = (path) => {
+        window.scrollTo({
+            top: 0,
+            left: 0,
+            behavior: 'smooth'
+        });
+
+        navigate(path);
+    };
+
     return (
-        <>  
+        <>
             <div className="relative">
-                <img className="relative desktop" src="/assets/home/desktop/image-hero.jpg"/>
-                <img className="relative mobile" src="/assets/home/mobile/image-header.jpg"/>
-                <img className="relative tablet" src="/assets/home/tablet/image-header.jpg"/>
+                <img className="relative desktop" src="/assets/home/desktop/image-hero.jpg" />
+                <img className="relative mobile" src="/assets/home/mobile/image-header.jpg" />
+                <img className="relative tablet" src="/assets/home/tablet/image-header.jpg" />
                 <div className="absolute hero-content-align">
                     <h1 className="font-['manrope'] tracking-[1rem] text-[#f1f1f1]">NEW PRODUCT</h1>
                     <h2 className="font-['manrope'] text-[#fafafa] text-[3rem] tracking-[.50rem] font-bold">XX99 MARK II HEADPHONES</h2>
                     <p className="text-[#f1f1f1] text-[1.1rem] w-[65%]">
-                        Experience natural, lifelike audio and exceptional build 
+                        Experience natural, lifelike audio and exceptional build
                         quality made for the passionate music enthusuiast
                     </p>
-                    <button className="uppercase bg-[#D87D4A] text-white px-7 py-3 text-[0.96rem] mt-5">see product</button>       
+                    <button className="uppercase bg-[#D87D4A] text-white px-7 py-3 text-[0.96rem] mt-5" onClick={() => handleOnClick('/headphones/xx99-mark-two-headphones')}>see product</button>
                 </div>
-            </div>
-            
+            </div >
+
             <Category />
 
             <div className="features mb-[10rem]">
@@ -32,7 +45,7 @@ const Homepage = () => {
                         <p className="font-['manrope'] text-[#FAFAFA]">
                             Upgrade to premium speakers that are phenomenally built to deliver truly remarkable sound.
                         </p>
-                        <button className="uppercase bg-[#000000] text-white px-7 py-3 mt-5 text-[0.96rem]">see product</button>
+                        <button className="uppercase bg-[#000000] text-white px-7 py-3 mt-5 text-[0.96rem]" onClick={() => handleOnClick('/speakers/zx9-speaker')}>see product</button>
                     </div>
                 </div>
 
@@ -42,7 +55,7 @@ const Homepage = () => {
                     <img className="relative rounded-lg tablet w-[100%]" src="/assets/home/tablet/image-speaker-zx7.jpg" alt="speaker-zx7" />
                     <div className="absolute top-[30%] left-[10%]">
                         <h1 className="font-['manrope'] uppercase text-[2rem] text=black">ZX7 Speaker</h1>
-                        <button className="font-['manrope'] uppercase bg-transparent border-2 text-black border-slate-700 px-7 py-3 mt-5 text-[0.96rem]">see product</button>
+                        <button className="font-['manrope'] uppercase bg-transparent border-2 text-black border-slate-700 px-7 py-3 mt-5 text-[0.96rem]" onClick={() => handleOnClick('/speakers/zx7-speaker')}>see product</button>
                     </div>
                 </div>
 
@@ -51,8 +64,8 @@ const Homepage = () => {
                     <img className="rounded-lg desktop size" src="/assets/home/desktop/image-earphones-yx1.jpg" alt="earphones-yx1" />
                     <img className="rounded-lg tablet size" src="/assets/home/tablet/image-earphones-yx1.jpg" alt="earphones-yx1" />
                     <div className="p-10 bg-[#f1f1f1] rounded-lg size">
-                        <h1 className="font-['manrope'] uppercase text-[2rem] text=black">YX1 Speaker</h1>
-                        <button className="font-['manrope'] uppercase bg-transparent border-2 text-black border-slate-700 px-7 py-3 mt-5 text-[0.96rem]">see product</button>
+                        <h1 className="font-['manrope'] uppercase text-[2rem] text=black">YX1 Earphones</h1>
+                        <button className="font-['manrope'] uppercase bg-transparent border-2 text-black border-slate-700 px-7 py-3 mt-5 text-[0.96rem]" onClick={() => handleOnClick('/earphones/yx1-earphones')}>see product</button>
                     </div>
                 </div>
             </div>
