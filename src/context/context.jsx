@@ -3,9 +3,10 @@ import axios from "axios";
 
 export const Context = createContext();
 
-const MyProvider = (props) => {
+const ContextProvider = (props) => {
     const [data, setData] = useState([]);
     const [mountData, setMountData] = useState('true');
+    const [selectedItem, setSelectedItem] = useState('');
 
 
     //Setting up navigation menu array
@@ -50,11 +51,11 @@ const MyProvider = (props) => {
 
     return (
         <>
-            <Context.Provider value={{ menuNav, setMenuNav, data }}>
+            <Context.Provider value={{ menuNav, setMenuNav, data, selectedItem, setSelectedItem }}>
                 {props.children}
             </Context.Provider>
         </>
     );
 };
 
-export default MyProvider;
+export default ContextProvider;
