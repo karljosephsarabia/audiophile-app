@@ -18,16 +18,15 @@ export const CartProvider = (props) => {
     });
 
     function handleAddToCartButton(item) {
-        // Update the cardData state with the new item
-        if (item.key === item.key) {
-            alert('error');
-        } else {
+        const isItemInCart = cardData.some((cartItem) => cartItem.id === item.id);
+        if (!isItemInCart) {
             setCardData((prevData) => {
                 const newData = [...prevData, item];
-                // Store the updated CardData array in localStorage
                 localStorage.setItem('items', JSON.stringify(newData));
                 return newData;
             });
+        } else {
+            alert('Item is already in the cart');
         }
     };
 
