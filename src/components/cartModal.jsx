@@ -1,7 +1,7 @@
 import { Fragment, useContext, useRef, useState } from 'react'
 import { Dialog, Transition } from '@headlessui/react'
 import { XMarkIcon } from '@heroicons/react/24/outline'
-import { CartContext } from '../context/cartContext';
+import { CartContext } from '../context/CartContext';
 import data from "../../public/data.json";
 
 const CartModal = () => {
