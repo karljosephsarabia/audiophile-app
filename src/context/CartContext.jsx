@@ -31,10 +31,12 @@ export const CartProvider = (props) => {
     };
 
     function handleRemoveFromCart(index) {
+        // console.log('Removing item at index', index);
         setCardData((prevData) => {
             if (index >= 0 && index < prevData.length) {
                 const newData = [...prevData];
                 newData.splice(index, 1);
+                // console.log('New data after removal', newData); // Log the updated data
                 localStorage.setItem('items', JSON.stringify(newData));
                 return newData;
             }

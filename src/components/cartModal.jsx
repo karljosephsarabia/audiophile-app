@@ -6,8 +6,12 @@ import data from "../../public/data.json";
 
 const CartModal = () => {
     
-    const { openModal , setOpenModal, cardData } = useContext(CartContext);
+    const { openModal , setOpenModal, cardData, handleRemoveFromCart } = useContext(CartContext);
     const cancelButtonRef = useRef(null);
+
+    function removeItemFromCart(index) {
+        handleRemoveFromCart(index);
+    };
 
     return (
         <>
@@ -57,8 +61,8 @@ const CartModal = () => {
                                         <div className="flow-root">
                                             <ul role="list" className="-my-6 divide-y divide-gray-200">
                                                 {
-                                                    cardData.map((product) => (
-                                                    <li key={product.id} className="py-6">
+                                                    cardData.map((product, index) => (
+                                                    <li key={index} className="py-6">
                                                         <div className='' style={{ display: "flex", gap: "10px"}}>
                                                         <div className="h-24 w-24 flex-shrink-0 rounded-md border border-gray-200">
                                                             <img
@@ -80,7 +84,7 @@ const CartModal = () => {
                                                                 </span>
                                                             </div>
                                                             <div className=''>
-                                                                <span className='remove'></span>
+                                                                <span className='remove' onClick={() => removeItemFromCart(index)}></span>
                                                             </div>
                                                         </div>
                                                         </div>
