@@ -5,10 +5,10 @@ import { useLocation, useNavigate } from 'react-router-dom';
 const ProductListView = () => {
     const { data } = useContext(Context);
     const location = useLocation();
-    const newLocation = location.pathname.replace('/', '');
+    const newLocation = location.pathname.replaceAll('/', '');
     const navigate = useNavigate();
 
-    const handleOnSelect = (category, slug) => {
+    const handleOnSelect = (slug) => {
         window.scrollTo({
             top: 0,
             left: 0,
@@ -44,7 +44,7 @@ const ProductListView = () => {
                             {newData.new && <h6 className="uppercase text-[#D87D4A] tracking-[0.6rem] font-semibold pb-[1.25rem] md:tracking-[0.7rem] lg:text-clampStatus lg:tracking-[0.625vw]">new product</h6>}
                             <h1 className="uppercase font-bold text-[2.2rem] leading-[2.75rem] md:text-[2.7rem] md:leading-[3.3rem] md:tracking-widest lg:text-clampTitle lg:leading-lineHeightClamp">{newData.name}</h1>
                             <p className="text-[0.96rem] py-6 md:text-[1.1rem] lg:text-clampDesc lg:py-paddingXClamp">{newData.description}</p>
-                            <button className="uppercase bg-[#D87D4A] text-white px-7 py-3 text-[0.96rem] md:text-[1.1rem] md:px-8 lg:text-buttonClamp lg:px-paddingXClamp hover:bg-[#FBAF85]" onClick={() => handleOnSelect(newData.category, newData.slug)}>see product</button>
+                            <button className="uppercase bg-[#D87D4A] text-white px-7 py-3 text-[0.96rem] md:text-[1.1rem] md:px-8 lg:text-buttonClamp lg:px-paddingXClamp hover:bg-[#FBAF85]" onClick={() => handleOnSelect(newData.slug)}>see product</button>
                         </div>
                     </div>
 
