@@ -2,7 +2,6 @@ import { Fragment, useContext, useRef, useState } from 'react'
 import { Dialog, Transition } from '@headlessui/react'
 import { XMarkIcon } from '@heroicons/react/24/outline'
 import { CartContext } from '../context/CartContext';
-import data from "../../public/data.json";
 
 const CartModal = () => {
     
@@ -62,31 +61,31 @@ const CartModal = () => {
                                             <ul role="list" className="-my-6 divide-y divide-gray-200">
                                                 {
                                                     cardData.map((product, index) => (
-                                                    <li key={index} className="py-6">
-                                                        <div className='' style={{ display: "flex", gap: "10px"}}>
-                                                        <div className="h-24 w-24 flex-shrink-0 rounded-md border border-gray-200">
-                                                            <img
-                                                                src={product.image.mobile}
-                                                                alt={product.slug}
-                                                                className="h-full w-full"
-                                                            />
-                                                        </div>
-                                                        <div style={{ display: "flex", alignItems: "start"}}>
-                                                            <div className='flex flex-col' style={{width: "200px"}}>
-                                                                <h3 className='w-[200px]' style={{textAlign: "start"}}>{product.name}</h3>
-                                                                <p style={{textAlign: "start"}}>{product.price}</p>
-                                                            </div>
-                                                            <div className="flex flex-row gap-5">
-                                                                <span className=" bg-[#F1F1F1]">
-                                                                    <button className="w-[10px] h-[10px]">-</button>
-                                                                    <input type="tel" name="quantity" className="text-center bg-[#F1F1F1] outline-none w-[38.72px] font-bold" defaultValue={1} min={0} max={99} maxLength={2} />
-                                                                    <button className="w-[10px] h-[10px]">+</button>
-                                                                </span>
+                                                    <li key={index} className="py-7">
+                                                        <div className='' style={{ display: "flex", justifyContent: "space-between", alignItems: "start"}}>
+                                                            <div className='' style={{display: "flex", gap: "8px"}}>
+                                                                <div className="h-20 w-20 flex-shrink-0 rounded-md border border-gray-200">
+                                                                    <img
+                                                                        src={product.image.mobile}
+                                                                        alt={product.slug}
+                                                                        className="h-full w-full"
+                                                                    />
+                                                                </div>
+                                                                <div className=''>
+                                                                    <h3 className='' style={{textAlign: "start"}}>{product.name}</h3>
+                                                                    <p style={{textAlign: "start"}}>{product.price}</p>
+                                                                    <div className="flex flex-row gap-5" style={{marginTop: "5px"}}>
+                                                                        <span className=" bg-[#F1F1F1]">
+                                                                            <button className="w-[10px] h-[10px]">-</button>
+                                                                            <input type="tel" name="quantity" className="text-center bg-[#F1F1F1] outline-none w-[38.72px] font-bold" defaultValue={1} min={0} max={99} maxLength={2} />
+                                                                            <button className="w-[10px] h-[10px]">+</button>
+                                                                        </span>
+                                                                    </div>
+                                                                </div>
                                                             </div>
                                                             <div className=''>
                                                                 <span className='remove' onClick={() => removeItemFromCart(index)}></span>
                                                             </div>
-                                                        </div>
                                                         </div>
                                                     </li>
                                                     ))
