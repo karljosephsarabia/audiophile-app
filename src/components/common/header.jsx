@@ -2,7 +2,7 @@ import { useContext } from "react";
 import { Context } from "../../context/context";
 import { useNavigate } from "react-router-dom";
 import CartModal from "../cartModal";
-import { CartContext } from "../../context/cartContext";
+import { CartContext } from "../../context/CartContext";
 
 
 const Header = () => {
