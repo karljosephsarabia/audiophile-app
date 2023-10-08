@@ -1,9 +1,21 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { CartContext } from "../../../context/CartContext";
 
 const ProductInfo = ({ item, status }) => {
 
-    const {handleAddToCartButton} = useContext(CartContext);
+    const {handleAddToCartButton, count, setCount} = useContext(CartContext);
+
+    function hanldeOnChange(e) {
+        setCount(e.target.value);
+    }
+
+    function handleIncrement() {
+        setCount(count + 1);
+    }
+
+    function handleDecrement() {
+        setCount(count - 1);
+    }
 
     return (
         <>
@@ -19,9 +31,9 @@ const ProductInfo = ({ item, status }) => {
                         <h3 className="font-bold text-[1.3rem] my-5 lg:my-productDetailTitle">$ {item.price.toLocaleString('en-US')}</h3>
                         <div className="flex flex-row gap-5">
                             <span className=" bg-[#F1F1F1]">
-                                <button className="w-[38.72px] h-[48px]">-</button>
-                                <input type="tel" name="quantity" className="text-center bg-[#F1F1F1] outline-none w-[38.72px] font-bold" defaultValue={1} min={0} max={99} maxLength={2} />
-                                <button className="w-[38.72px] h-[48px]">+</button>
+                                <button className="w-[38.72px] h-[48px]" onClick={handleDecrement}>-</button>
+                                <input onChange={hanldeOnChange} value={count} type="tel" name="quantity" className="text-center bg-[#F1F1F1] outline-none w-[38.72px] font-bold" defaultValue={1} min={0} max={99} maxLength={2} />
+                                <button className="w-[38.72px] h-[48px]" onClick={handleIncrement}>+</button>
                             </span>
                             <button className="uppercase bg-orange text-white font-bold tracking-widest px-8 text-[0.90rem]"
                             onClick={() => handleAddToCartButton(item)}>add to card</button>
