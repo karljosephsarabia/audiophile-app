@@ -74,10 +74,10 @@ const CartModal = () => {
                                                                 <div className=''>
                                                                     <h3 className='' style={{textAlign: "start"}}>{product.name}</h3>
                                                                     <p style={{textAlign: "start"}}>{product.price} x {product.quantity}</p>
-                                                                    <div className="flex flex-row gap-5" style={{marginTop: "5px"}}>
+                                                                    <div className="flex flex-row gap-6" style={{marginTop: "5px"}}>
                                                                         <span className=" bg-[#F1F1F1]">
                                                                             <button className="w-[10px] h-[10px]" onClick={() => handleDecreement(product)}>-</button>
-                                                                            <span>{product.quantity}</span>
+                                                                            <span className='text-center p-[10px]'>{product.quantity}</span>
                                                                             <button className="w-[10px] h-[10px]" onClick={() => handleInrcreement(product)}>+</button>
                                                                         </span>
                                                                     </div>
