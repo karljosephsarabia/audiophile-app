@@ -56,11 +56,36 @@ export const CartProvider = (props) => {
     // Count the cart
     const cartCount = cardData.length;
 
+    // Handle the increment
+    function handleInrcreement(product) {
+        const updatedCardData = cardData.map((data) =>
+            data.id === product.id ? { ...data, quantity: data.quantity + 1 } : data
+        );
+        setCardData(updatedCardData);
+        localStorage.setItem('items', JSON.stringify(updatedCardData));
+        calculateTotal(updatedCardData);   
+    }
+
+    // Handle thd decrement
+    function handleDecreement(product) {
+        if (product.quantity > 1) {
+                const updatedCardData = cardData.map((data) =>
+                data.id === product.id ? { ...data, quantity: data.quantity - 1 } : data
+            );
+            setCardData(updatedCardData);
+            localStorage.setItem('items', JSON.stringify(updatedCardData));
+            calculateTotal(updatedCardData);
+        } else {
+            return null;
+        }
+    }
+
     return (
         <>
             <CartContext.Provider value={{
                 openModal, setOpenModal,
                 cardData, handleAddToCartButton, handleRemoveFromCart, cartCount, total, setTotal, setCardData, calculateTotal,
+                handleInrcreement ,handleDecreement
             }}>
                 {props.children}
             </CartContext.Provider>
