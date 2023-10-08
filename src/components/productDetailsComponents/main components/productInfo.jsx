@@ -32,7 +32,7 @@ const ProductInfo = ({ item, status }) => {
                         <div className="flex flex-row gap-5">
                             <span className=" bg-[#F1F1F1]">
                                 <button className="w-[38.72px] h-[48px]" onClick={handleDecrement}>-</button>
-                                <input onChange={hanldeOnChange} value={count} type="tel" name="quantity" className="text-center bg-[#F1F1F1] outline-none w-[38.72px] font-bold" defaultValue={1} min={0} max={99} maxLength={2} />
+                                <input onChange={hanldeOnChange} value={count} type="tel" name="quantity" className="text-center bg-[#F1F1F1] outline-none w-[38.72px] font-bold" min={0} max={99} maxLength={2} />
                                 <button className="w-[38.72px] h-[48px]" onClick={handleIncrement}>+</button>
                             </span>
                             <button className="uppercase bg-orange text-white font-bold tracking-widest px-8 text-[0.90rem]"
