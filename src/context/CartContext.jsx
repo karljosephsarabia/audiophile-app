@@ -7,6 +7,7 @@ export const CartProvider = (props) => {
     const [cardData, setCardData] = useState([]);
     const [total, setTotal] = useState(0);
     const [count, setCount] = useState(1);
+    const [notif , setNotif] = useState(false);
 
     // Load cart data and total from localStorage on component mount
     useEffect(() => {
@@ -34,6 +35,7 @@ export const CartProvider = (props) => {
         const newItem = { ...item, quantity: count };
         const isItemInCart = cardData.some((cartItem) => cartItem.id === item.id);
         if (!isItemInCart) {
+            setNotif(true);
             const updatedCardData = [...cardData, newItem];
             setCardData(updatedCardData);
             localStorage.setItem('items', JSON.stringify(updatedCardData));
@@ -86,7 +88,7 @@ export const CartProvider = (props) => {
             <CartContext.Provider value={{
                 openModal, setOpenModal,
                 cardData, handleAddToCartButton, handleRemoveFromCart, cartCount, total, setTotal, setCardData, calculateTotal,
-                handleInrcreement ,handleDecreement, count, setCount,
+                handleInrcreement ,handleDecreement, count, setCount, notif, setNotif,
             }}>
                 {props.children}
             </CartContext.Provider>
