@@ -29,9 +29,10 @@ export const CartProvider = (props) => {
   
     // Add an item to the cart
     function handleAddToCartButton(item) {
+        const newItem = { ...item, quantity: 1 };
         const isItemInCart = cardData.some((cartItem) => cartItem.id === item.id);
         if (!isItemInCart) {
-            const updatedCardData = [...cardData, item];
+            const updatedCardData = [...cardData, newItem];
             setCardData(updatedCardData);
             localStorage.setItem('items', JSON.stringify(updatedCardData));
             calculateTotal(updatedCardData);
@@ -58,7 +59,7 @@ export const CartProvider = (props) => {
         <>
             <CartContext.Provider value={{
                 openModal, setOpenModal,
-                cardData, handleAddToCartButton, handleRemoveFromCart, cartCount, total, 
+                cardData, handleAddToCartButton, handleRemoveFromCart, cartCount, total, setTotal, setCardData, calculateTotal,
             }}>
                 {props.children}
             </CartContext.Provider>
