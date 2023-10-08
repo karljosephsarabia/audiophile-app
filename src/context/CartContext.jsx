@@ -13,6 +13,7 @@ export const CartProvider = (props) => {
         if (storedData) {
             try {
             const parsedData = JSON.parse(storedData);
+            localStorage.setItem('items', JSON.stringify(parsedData));
             setCardData(parsedData);
             calculateTotal(parsedData);
             } catch (error) {
