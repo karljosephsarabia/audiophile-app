@@ -1,29 +1,16 @@
-import { Fragment, useContext, useRef, useState } from 'react'
+import { Fragment, useContext, useEffect, useRef, useState } from 'react'
 import { Dialog, Transition } from '@headlessui/react'
 import { XMarkIcon } from '@heroicons/react/24/outline'
 import { CartContext } from '../context/CartContext';
 
 const CartModal = () => {
     
-    const { openModal , setOpenModal, cardData, handleRemoveFromCart, cartCount, total} = useContext(CartContext);
+    const { openModal , setOpenModal, cardData, handleRemoveFromCart, cartCount, total, handleInrcreement, handleDecreement} = useContext(CartContext);
     const cancelButtonRef = useRef(null);
-    const [count , setCount] = useState(1);
 
     function removeItemFromCart(index) {
         handleRemoveFromCart(index);
     };
-
-    function handleInrcreement(product) {
-        setCount(count + 1);
-    }
-
-    function handleDecreement(product) {
-        if (count > 1) {
-            setCount(count - 1);
-        } else {
-            return null;
-        }
-    }
 
     return (
         <>
@@ -86,11 +73,11 @@ const CartModal = () => {
                                                                 </div>
                                                                 <div className=''>
                                                                     <h3 className='' style={{textAlign: "start"}}>{product.name}</h3>
-                                                                    <p style={{textAlign: "start"}}>{product.price} x {count}</p>
+                                                                    <p style={{textAlign: "start"}}>{product.price} x {product.quantity}</p>
                                                                     <div className="flex flex-row gap-5" style={{marginTop: "5px"}}>
                                                                         <span className=" bg-[#F1F1F1]">
                                                                             <button className="w-[10px] h-[10px]" onClick={() => handleDecreement(product)}>-</button>
-                                                                            <span>{count}</span>
+                                                                            <span>{product.quantity}</span>
                                                                             <button className="w-[10px] h-[10px]" onClick={() => handleInrcreement(product)}>+</button>
                                                                         </span>
                                                                     </div>
