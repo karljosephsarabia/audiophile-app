@@ -24,7 +24,7 @@ export const CartProvider = (props) => {
   
     // Calculate the total based on the items
     const calculateTotal = (items) => {
-        const newTotal = items.reduce((acc, item) => acc + item.price, 0);
+        const newTotal = items.reduce((acc, item) => acc + item.price * item.quantity, 0);
         setTotal(newTotal);
     };
   
