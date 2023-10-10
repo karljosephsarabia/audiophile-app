@@ -1,5 +1,6 @@
-import { useContext, useState } from "react";
+import { useContext } from "react";
 import { CartContext } from "../../../context/CartContext";
+import { ToastContainer } from 'react-toastify';
 
 const ProductInfo = ({ item, status }) => {
 
@@ -57,6 +58,7 @@ const ProductInfo = ({ item, status }) => {
                     </div>
                 </section>
             </div>
+            <ToastContainer />        
         </>
     );
 };
