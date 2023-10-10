@@ -1,4 +1,6 @@
 import { createContext, useState, useEffect } from "react";
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 export const CartContext = createContext();
 export const CartProvider = (props) => {
@@ -35,13 +37,13 @@ export const CartProvider = (props) => {
         const newItem = { ...item, quantity: count };
         const isItemInCart = cardData.some((cartItem) => cartItem.id === item.id);
         if (!isItemInCart) {
-            setNotif(true);
+            setNotif(true);toastNotifysuccess();
             const updatedCardData = [...cardData, newItem];
             setCardData(updatedCardData);
             localStorage.setItem('items', JSON.stringify(updatedCardData));
             calculateTotal(updatedCardData);
         } else {
-            alert('Item is already in the cart');
+            toastNotifyError();
         }
     };
   
@@ -83,12 +85,24 @@ export const CartProvider = (props) => {
         }
     }
 
+    function toastNotifysuccess() {
+        toast.success('Added to cart', {position: "top-right",autoClose: 2000,hideProgressBar: true,closeOnClick: true,
+            pauseOnHover: true,draggable: true,progress: undefined,theme: "dark",toastId: "toastId"
+        });
+    }
+
+    function toastNotifyError() {
+        toast.error('already in the cart', {position: "top-right",autoClose: 2000,hideProgressBar: true,closeOnClick: true,
+            pauseOnHover: true,draggable: true,progress: undefined,theme: "colored",toastId: "toastId"
+        });
+    }
+
     return (
         <>
             <CartContext.Provider value={{
                 openModal, setOpenModal,
                 cardData, handleAddToCartButton, handleRemoveFromCart, cartCount, total, setTotal, setCardData, calculateTotal,
-                handleInrcreement ,handleDecreement, count, setCount, notif, setNotif,
+                handleInrcreement ,handleDecreement, count, setCount, notif, setNotif, 
             }}>
                 {props.children}
             </CartContext.Provider>
